@@ -1,8 +1,10 @@
 #this is a loop through each of the posts
 
+<h1>Click on the map to see the places I've been</h1>
+
 <% @posts.each do|post| %>
 <div class=”post_wrapper”>
-<h2 class=“title”><% link_to post.title, post %> </h2>
+<h2 class=“title”><%= link_to post.title, post %> </h2>
 <p class="date"><%= post.created_at.strftime("Posted on %B %d, %Y at %H:%M") %></p>
 </div>
 
