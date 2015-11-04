@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+before_filter :authorize
+
 def index
 	@posts= Post.all
 	@posts= Post.all.order('created_at DESC')
