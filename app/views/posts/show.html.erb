@@ -1,6 +1,13 @@
+
+
 <h1 class=”title”>
 <%= @post.title %>
 </h1>
+
+<h2 class=”location”>
+<%= @post.city %>
+<%= @post.country %>
+</h2>
 
 <p class=“date”>
 Submitted <% time_ago_in_words(@post.created_at) %> Ago
@@ -10,6 +17,7 @@ Submitted <% time_ago_in_words(@post.created_at) %> Ago
 
 <p class="body">
 <%= @post.body %>
+<%= image_tag @post.avatar %>
 </p>
 
 <div id=”comments”>
@@ -18,5 +26,4 @@ Submitted <% time_ago_in_words(@post.created_at) %> Ago
 
 <h3>Add a comment:</h3>
 <%= render "comments/form" %>
-</div>
 </div>

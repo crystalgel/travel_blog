@@ -1,6 +1,11 @@
-<h1>Click on the map to see the places I've been</h1>
+<head>
+  <style type="text/css">
+	html, body { height: 100%; margin: 0; padding: 0; }
+	#map { height: 80%; width: 80%; }
+  </style>
+</head>
 
-#this is a loop through each of the posts
+<h1>Recent Posts</h1>
 
 <% @posts.each do|post| %>
 <div class=”post_wrapper”>
@@ -9,3 +14,26 @@
 </div>
 
 <% end %>
+
+<div id="map"></div>
+
+<script type="text/javascript">
+function initMap() {
+  var myLatLng = {lat: 48.856614, lng: 2.352222};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 1,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+}
+
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR12HZYapzOTAAnQZYPp9GtM8EHm6PJN4&callback=initMap">
+</script>

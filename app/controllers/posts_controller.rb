@@ -48,9 +48,10 @@ def destroy
 end
 
 
+
 private
 def post_params
-	params.require(:post).permit(:title, :body)
+	params.require(:post).permit(:title, :body, :photos, :avatar, :remote_avatar_url, :country, :city)
 end
 
 end
