@@ -47,7 +47,9 @@ def destroy
 	redirect_to posts_path
 end
 
-
+def map
+	
+end
 
 private
 def post_params

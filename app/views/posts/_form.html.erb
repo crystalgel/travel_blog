@@ -1,6 +1,7 @@
+
 <%= form_for @post, :html => {:multipart => true} do |f| %>
  <%if @post.errors.any? %>
-	<div id=“errors”>
+	<div id=“post_errors”>
 		<h2> <%= pluralize(@post.errors.count, "error")%>
 			prevented this post from saving </h2>
 		<ul>
@@ -11,26 +12,29 @@
 	</div>
 <%end%>
 
+<div id="post_title">
+
 	<p>
 		<%= f.label :title %><br>
 		<%= f.text_field :title %>
 	</p>
+</div>
 
-    <p>
+<div id="post_location">
         <%= f.label :country %>
         <%= f.text_field :country %>
         <%= f.label :city %>
         <%= f.text_field :city %>
-    </p>
+</div>
 
-	<p>
-		<%= f.label :body %><br>
+<div id="post_body">
+		<%= f.label :body %> <br>
 		<%= f.text_area :body %>
-	</p>
+</div>
 
-<div id=“photos”>
+<div id=“post_photos”>
 <p>
-    <%= f.label :avatar %> <br>
+    <%= f.label :photos %> <br>
     <%= f.file_field :avatar %> </p>
 <p>
     <%= image_tag(@post.avatar_url) if @post.avatar? %>

@@ -1,39 +1,21 @@
-<head>
-  <style type="text/css">
-	html, body { height: 100%; margin: 0; padding: 0; }
-	#map { height: 80%; width: 80%; }
-  </style>
-</head>
 
-<h1>Recent Posts</h1>
 
-<% @posts.each do|post| %>
-<div class=”post_wrapper”>
-<h2 class=“title”><%= link_to post.title, post %> </h2>
-<p class="date"><%= post.created_at.strftime("Posted on %B %d, %Y at %H:%M") %></p>
-</div>
 
-<% end %>
+     <style type="text/css">
 
-<div id="map"></div>
+         html, body, {
+             height: 100%;
+             margin: 0;
+             padding: 0;
+             background-color: white;
+         }
 
-<script type="text/javascript">
-function initMap() {
-  var myLatLng = {lat: 48.856614, lng: 2.352222};
 
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 1,
-    center: myLatLng
-  });
+       </style>
 
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Hello World!'
-  });
-}
-
-</script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR12HZYapzOTAAnQZYPp9GtM8EHm6PJN4&callback=initMap">
-</script>
+         <% @posts.each do|post| %>
+         <div class=”post_wrapper”>
+         <h2 class=“title”><%= link_to post.title, post %> </h2>
+         <p class="date"><%= post.created_at.strftime("Posted on %B %d, %Y at %H:%M") %></p>
+        </div>
+         <% end %>
