@@ -1,6 +1,37 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+    background: #333 url(http://www.myfreephotoshop.com/wp-content/uploads/2013/08/987.jpg);
+    background-size: contain;
+    background-repeat: repeat-y;
+
+}
+
+.wrapper img {
+    width: 100%;
+}
+
+.posts{
+    margin-top: 10px;
+}
+
+.wrapper {
+    border: 5px, solid gray;
+    max-width: 550px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.content {
+    padding: 10px;
+}
+
+#map {
+	height: 700px;
+	width: 100%;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

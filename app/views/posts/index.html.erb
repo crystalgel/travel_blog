@@ -1,13 +1,19 @@
-<body>
-   <h1>Hello, world!</h1>
 
-<div class="posts_container">
-         <% @posts.each do|post| %>
-         <div class=”post_wrapper”>
-         <h2 class=“title”><%= link_to post.title, post %> </h2>
-         <h2 class=“title”><%= image_tag post.avatar %> </h2>
-         <p class="date"><%= post.created_at.strftime("Posted on %B %d, %Y at %H:%M") %></p>
+
+<div class="posts">
+    <div class="content">
+        <h1>I have lots of posts! Want to see them?! Of course you do!</h1>
+    </div>
+
+    <% @posts.each do|post| %>
+    <div class="post_wrapper">
+        <div class="content">
+            <h2 class="title"><%= link_to post.title, post %> </h2>
         </div>
-         <% end %>
+        <%= image_tag post.avatar %>
+        <div class="content">
+            <p class="date"><%= post.created_at.strftime("Posted on %B %d, %Y at %H:%M") %></p>
+        </div>
+    </div>
+    <% end %>
 </div>
-</body>
