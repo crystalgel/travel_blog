@@ -48,7 +48,10 @@ def destroy
 end
 
 def map
-	
+
+end
+
+def resize_to_fit
 end
 
 private

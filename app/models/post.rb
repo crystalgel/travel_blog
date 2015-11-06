@@ -5,6 +5,8 @@ class Post < ActiveRecord::Base
 	validates :body, presence: true
 
   	mount_uploader :avatar, AvatarUploader
+	mount_uploaders :avatars, AvatarUploader
+
 
   	belongs_to :post
 end

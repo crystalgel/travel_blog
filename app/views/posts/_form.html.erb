@@ -35,7 +35,8 @@
 <div id=“post_photos”>
 <p>
     <%= f.label :photos %> <br>
-    <%= f.file_field :avatar %> </p>
+    <%= f.file_field :avatar %>
+</p>
 <p>
     <%= image_tag(@post.avatar_url) if @post.avatar? %>
     <%= f.text_field :remote_avatar_url %> </p>
