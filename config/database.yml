@@ -22,6 +22,6 @@ test:
 
 production:
 adapter: postgresql
-database: app_name_production
+database: travel_blog_production
 pool: 5
 timeout: 5000

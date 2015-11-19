@@ -30,7 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 gem 'rails_12factor', group: :production
 
-gem 'pg', '~> 0.18.4'
+#gem 'pg', '~> 0.18.4'
+gem 'pg'
 
 
 # Use Capistrano for deployment
