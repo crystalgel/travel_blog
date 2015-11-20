@@ -16,3 +16,4 @@ Future updates and fixes:
 * google map isn't showing all locations 
 * tags, filters
 * clean up code: delete unused code and notes
+* errors when deploying to Heroku
