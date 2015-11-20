@@ -1,28 +1,18 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Purpose: Build a Ruby on Rails CRUD app for project 2 at General Assembly. 
 
-Things you may want to cover:
+This is a simple blog where users are able to:
+- sign up or login 
+- create, read, update or delete a post, photo and comment
+- view and interact with google maps API
 
-* Ruby version
+* Ruby version 2.0.0p645
+* Database: PostgresSQL
+* Password authentication: bcrypt
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Future updates and fixes: 
+* multiple photos to upload
+* google map isn't showing all locations 
+* tags, filters
+* clean up code: delete unused code and notes
